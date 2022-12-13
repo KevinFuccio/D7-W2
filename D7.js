@@ -15,23 +15,39 @@ console.log(lettereStringhe("ciao", "rita"));
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
-let numeroCasuale = function(numArray){
+// let numeroCasuale = function(arr){
 
-  
-}
-console.log(numeroCasuale(21));
+
+// }
+
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
+let arrayEs3 = [2,3,8,12,13,20,22,27,35,48,50,51,55,60]
 
+let arrPari = arrayEs3.filter((num) => num % 2 === 0)
+console.log(arrPari);
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+let sumEs4 = 0
+let sommaEs4 = function(num){
+    num = 0
+    for (let i = 0; i < arrayEs3.length; i++) {
+      sumEs4 += arrayEs3[i]
+      
+      
+    }return sumEs4
+    }
+
+console.log(sommaEs4(sumEs4));
 
 /* ESERCIZIO 5
-  Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
+Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
-
+const initValue = 0
+let sum = arrayEs3.reduce((num,num2) => num + num2, initValue);
+console.log(sum);
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
